@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56A515E920C0211E00667FED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515E820C0211E00667FED /* AppDelegate.swift */; };
+		56A515EB20C0211E00667FED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515EA20C0211E00667FED /* ViewController.swift */; };
+		56A515EE20C0211E00667FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EC20C0211E00667FED /* Main.storyboard */; };
+		56A515F020C0211F00667FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EF20C0211F00667FED /* Assets.xcassets */; };
+		56A515F320C0211F00667FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A515F120C0211F00667FED /* LaunchScreen.storyboard */; };
+		56A515FE20C0212000667FED /* RuuviInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515FD20C0212000667FED /* RuuviInfoTests.swift */; };
+		56A5160920C0212000667FED /* RuuviInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5160820C0212000667FED /* RuuviInfoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56A515FA20C0212000667FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56A515DD20C0211D00667FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56A515E420C0211D00667FED;
+			remoteInfo = RuuviInfo;
+		};
+		56A5160520C0212000667FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56A515DD20C0211D00667FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56A515E420C0211D00667FED;
+			remoteInfo = RuuviInfo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56A515E520C0211E00667FED /* RuuviInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuuviInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A515E820C0211E00667FED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56A515EA20C0211E00667FED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56A515ED20C0211E00667FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56A515EF20C0211F00667FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56A515F220C0211F00667FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56A515F420C0211F00667FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56A515F920C0212000667FED /* RuuviInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuuviInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A515FD20C0212000667FED /* RuuviInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoTests.swift; sourceTree = "<group>"; };
+		56A515FF20C0212000667FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56A5160420C0212000667FED /* RuuviInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuuviInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A5160820C0212000667FED /* RuuviInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoUITests.swift; sourceTree = "<group>"; };
+		56A5160A20C0212000667FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56A515E220C0211D00667FED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A515F620C0212000667FED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A5160120C0212000667FED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56A515DC20C0211D00667FED = {
+			isa = PBXGroup;
+			children = (
+				56A515E720C0211E00667FED /* RuuviInfo */,
+				56A515FC20C0212000667FED /* RuuviInfoTests */,
+				56A5160720C0212000667FED /* RuuviInfoUITests */,
+				56A515E620C0211E00667FED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56A515E620C0211E00667FED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56A515E520C0211E00667FED /* RuuviInfo.app */,
+				56A515F920C0212000667FED /* RuuviInfoTests.xctest */,
+				56A5160420C0212000667FED /* RuuviInfoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56A515E720C0211E00667FED /* RuuviInfo */ = {
+			isa = PBXGroup;
+			children = (
+				56A515E820C0211E00667FED /* AppDelegate.swift */,
+				56A515EA20C0211E00667FED /* ViewController.swift */,
+				56A515EC20C0211E00667FED /* Main.storyboard */,
+				56A515EF20C0211F00667FED /* Assets.xcassets */,
+				56A515F120C0211F00667FED /* LaunchScreen.storyboard */,
+				56A515F420C0211F00667FED /* Info.plist */,
+			);
+			path = RuuviInfo;
+			sourceTree = "<group>";
+		};
+		56A515FC20C0212000667FED /* RuuviInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				56A515FD20C0212000667FED /* RuuviInfoTests.swift */,
+				56A515FF20C0212000667FED /* Info.plist */,
+			);
+			path = RuuviInfoTests;
+			sourceTree = "<group>";
+		};
+		56A5160720C0212000667FED /* RuuviInfoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				56A5160820C0212000667FED /* RuuviInfoUITests.swift */,
+				56A5160A20C0212000667FED /* Info.plist */,
+			);
+			path = RuuviInfoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56A515E420C0211D00667FED /* RuuviInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56A5160D20C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfo" */;
+			buildPhases = (
+				56A515E120C0211D00667FED /* Sources */,
+				56A515E220C0211D00667FED /* Frameworks */,
+				56A515E320C0211D00667FED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuuviInfo;
+			productName = RuuviInfo;
+			productReference = 56A515E520C0211E00667FED /* RuuviInfo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56A515F820C0212000667FED /* RuuviInfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56A5161020C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfoTests" */;
+			buildPhases = (
+				56A515F520C0212000667FED /* Sources */,
+				56A515F620C0212000667FED /* Frameworks */,
+				56A515F720C0212000667FED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56A515FB20C0212000667FED /* PBXTargetDependency */,
+			);
+			name = RuuviInfoTests;
+			productName = RuuviInfoTests;
+			productReference = 56A515F920C0212000667FED /* RuuviInfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56A5160320C0212000667FED /* RuuviInfoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56A5161320C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfoUITests" */;
+			buildPhases = (
+				56A5160020C0212000667FED /* Sources */,
+				56A5160120C0212000667FED /* Frameworks */,
+				56A5160220C0212000667FED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56A5160620C0212000667FED /* PBXTargetDependency */,
+			);
+			name = RuuviInfoUITests;
+			productName = RuuviInfoUITests;
+			productReference = 56A5160420C0212000667FED /* RuuviInfoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56A515DD20C0211D00667FED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Tomi Lahtinen";
+				TargetAttributes = {
+					56A515E420C0211D00667FED = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					56A515F820C0212000667FED = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 56A515E420C0211D00667FED;
+					};
+					56A5160320C0212000667FED = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 56A515E420C0211D00667FED;
+					};
+				};
+			};
+			buildConfigurationList = 56A515E020C0211D00667FED /* Build configuration list for PBXProject "RuuviInfo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56A515DC20C0211D00667FED;
+			productRefGroup = 56A515E620C0211E00667FED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56A515E420C0211D00667FED /* RuuviInfo */,
+				56A515F820C0212000667FED /* RuuviInfoTests */,
+				56A5160320C0212000667FED /* RuuviInfoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56A515E320C0211D00667FED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A515F320C0211F00667FED /* LaunchScreen.storyboard in Resources */,
+				56A515F020C0211F00667FED /* Assets.xcassets in Resources */,
+				56A515EE20C0211E00667FED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A515F720C0212000667FED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A5160220C0212000667FED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56A515E120C0211D00667FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A515EB20C0211E00667FED /* ViewController.swift in Sources */,
+				56A515E920C0211E00667FED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A515F520C0212000667FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A515FE20C0212000667FED /* RuuviInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A5160020C0212000667FED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A5160920C0212000667FED /* RuuviInfoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56A515FB20C0212000667FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56A515E420C0211D00667FED /* RuuviInfo */;
+			targetProxy = 56A515FA20C0212000667FED /* PBXContainerItemProxy */;
+		};
+		56A5160620C0212000667FED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56A515E420C0211D00667FED /* RuuviInfo */;
+			targetProxy = 56A5160520C0212000667FED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56A515EC20C0211E00667FED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56A515ED20C0211E00667FED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56A515F120C0211F00667FED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56A515F220C0211F00667FED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56A5160B20C0212000667FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56A5160C20C0212000667FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56A5160E20C0212000667FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56A5160F20C0212000667FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56A5161120C0212000667FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuuviInfo.app/RuuviInfo";
+			};
+			name = Debug;
+		};
+		56A5161220C0212000667FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuuviInfo.app/RuuviInfo";
+			};
+			name = Release;
+		};
+		56A5161420C0212000667FED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RuuviInfo;
+			};
+			name = Debug;
+		};
+		56A5161520C0212000667FED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YU4AFJ6SHS;
+				INFOPLIST_FILE = RuuviInfoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.ruuvi.RuuviInfoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RuuviInfo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56A515E020C0211D00667FED /* Build configuration list for PBXProject "RuuviInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5160B20C0212000667FED /* Debug */,
+				56A5160C20C0212000667FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56A5160D20C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5160E20C0212000667FED /* Debug */,
+				56A5160F20C0212000667FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56A5161020C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5161120C0212000667FED /* Debug */,
+				56A5161220C0212000667FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56A5161320C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5161420C0212000667FED /* Debug */,
+				56A5161520C0212000667FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56A515DD20C0211D00667FED /* Project object */;
+}
