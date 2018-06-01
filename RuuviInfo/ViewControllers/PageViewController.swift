@@ -12,14 +12,14 @@ class PageViewController: UIPageViewController {
     
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "ListPage"),
-            self.getViewController(withIdentifier: "CurrentDataPage"),
-            self.getViewController(withIdentifier: "HistoryDataPage")
+            self.getViewController(withIdentifier: "ListPage")
+            // self.getViewController(withIdentifier: "CurrentDataPage"),
+            // self.getViewController(withIdentifier: "HistoryDataPage")
         ]
     }()
     
     fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController {
-        return UIStoryboard(name: "main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
 
     override func viewDidLoad() {
@@ -29,6 +29,9 @@ class PageViewController: UIPageViewController {
         
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        }
+        else {
+            fatalError("Can't create view controllers :/")
         }
     }
 

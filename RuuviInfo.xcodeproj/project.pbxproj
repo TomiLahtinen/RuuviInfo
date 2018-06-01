@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		56A515E920C0211E00667FED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515E820C0211E00667FED /* AppDelegate.swift */; };
-		56A515EB20C0211E00667FED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515EA20C0211E00667FED /* ViewController.swift */; };
+		56A515EB20C0211E00667FED /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515EA20C0211E00667FED /* PageViewController.swift */; };
 		56A515EE20C0211E00667FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EC20C0211E00667FED /* Main.storyboard */; };
 		56A515F020C0211F00667FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EF20C0211F00667FED /* Assets.xcassets */; };
 		56A515F320C0211F00667FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A515F120C0211F00667FED /* LaunchScreen.storyboard */; };
 		56A515FE20C0212000667FED /* RuuviInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515FD20C0212000667FED /* RuuviInfoTests.swift */; };
 		56A5160920C0212000667FED /* RuuviInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5160820C0212000667FED /* RuuviInfoUITests.swift */; };
+		56A5161720C025F800667FED /* ListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161620C025F800667FED /* ListPageViewController.swift */; };
+		56A5161C20C0274E00667FED /* RuuviTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161B20C0274E00667FED /* RuuviTag.swift */; };
+		56A5161E20C0277A00667FED /* TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161D20C0277A00667FED /* TagInfo.swift */; };
+		56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162120C0281300667FED /* RuuviTagListViewModel.swift */; };
+		56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162320C11F9300667FED /* BLEDeviceRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		56A515E520C0211E00667FED /* RuuviInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuuviInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A515E820C0211E00667FED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56A515EA20C0211E00667FED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56A515EA20C0211E00667FED /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		56A515ED20C0211E00667FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56A515EF20C0211F00667FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56A515F220C0211F00667FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		56A5160420C0212000667FED /* RuuviInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuuviInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A5160820C0212000667FED /* RuuviInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoUITests.swift; sourceTree = "<group>"; };
 		56A5160A20C0212000667FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56A5161620C025F800667FED /* ListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewController.swift; sourceTree = "<group>"; };
+		56A5161B20C0274E00667FED /* RuuviTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTag.swift; sourceTree = "<group>"; };
+		56A5161D20C0277A00667FED /* TagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInfo.swift; sourceTree = "<group>"; };
+		56A5162120C0281300667FED /* RuuviTagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTagListViewModel.swift; sourceTree = "<group>"; };
+		56A5162320C11F9300667FED /* BLEDeviceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDeviceRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +107,13 @@
 		56A515E720C0211E00667FED /* RuuviInfo */ = {
 			isa = PBXGroup;
 			children = (
+				56A5162020C027FE00667FED /* ViewModels */,
+				56A5161F20C027E400667FED /* Repository */,
+				56A5161A20C0272E00667FED /* Storyboards */,
+				56A5161920C0272000667FED /* ViewControllers */,
+				56A5161820C0271600667FED /* Models */,
 				56A515E820C0211E00667FED /* AppDelegate.swift */,
-				56A515EA20C0211E00667FED /* ViewController.swift */,
-				56A515EC20C0211E00667FED /* Main.storyboard */,
 				56A515EF20C0211F00667FED /* Assets.xcassets */,
-				56A515F120C0211F00667FED /* LaunchScreen.storyboard */,
 				56A515F420C0211F00667FED /* Info.plist */,
 			);
 			path = RuuviInfo;
@@ -123,6 +135,49 @@
 				56A5160A20C0212000667FED /* Info.plist */,
 			);
 			path = RuuviInfoUITests;
+			sourceTree = "<group>";
+		};
+		56A5161820C0271600667FED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56A5161B20C0274E00667FED /* RuuviTag.swift */,
+				56A5161D20C0277A00667FED /* TagInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56A5161920C0272000667FED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				56A515EA20C0211E00667FED /* PageViewController.swift */,
+				56A5161620C025F800667FED /* ListPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56A5161A20C0272E00667FED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				56A515EC20C0211E00667FED /* Main.storyboard */,
+				56A515F120C0211F00667FED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56A5161F20C027E400667FED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				56A5162320C11F9300667FED /* BLEDeviceRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		56A5162020C027FE00667FED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				56A5162120C0281300667FED /* RuuviTagListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +248,11 @@
 				TargetAttributes = {
 					56A515E420C0211D00667FED = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					56A515F820C0212000667FED = {
 						CreatedOnToolsVersion = 9.3;
@@ -256,7 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A515EB20C0211E00667FED /* ViewController.swift in Sources */,
+				56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */,
+				56A5161C20C0274E00667FED /* RuuviTag.swift in Sources */,
+				56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */,
+				56A5161720C025F800667FED /* ListPageViewController.swift in Sources */,
+				56A515EB20C0211E00667FED /* PageViewController.swift in Sources */,
+				56A5161E20C0277A00667FED /* TagInfo.swift in Sources */,
 				56A515E920C0211E00667FED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

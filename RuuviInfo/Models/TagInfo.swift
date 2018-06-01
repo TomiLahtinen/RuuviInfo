@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct TagInfo {
+    
+    let temperature: Double
+    let humidity: Double
+    let pressure: Double
+    let RSSI: Int
+    
+}
