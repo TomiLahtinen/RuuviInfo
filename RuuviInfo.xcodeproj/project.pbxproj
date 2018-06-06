@@ -465,6 +465,11 @@
 				TargetAttributes = {
 					5630757020C7C0DB0013147D = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 1;
+							};
+						};
 					};
 					5630758320C7C0DE0013147D = {
 						CreatedOnToolsVersion = 9.4;

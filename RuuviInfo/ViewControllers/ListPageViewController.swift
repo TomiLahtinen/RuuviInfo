@@ -12,6 +12,7 @@ import UIKit
 class ListPageViewController: UIViewController {
     
     static let InfoCellIdentifier = "RuuviInfoCell"
+    var indexPath: IndexPath?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,6 +43,12 @@ class ListPageViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Add the gesture recognizer
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectTapped(tapGestureRecognizer:)))
+        let pressType = UIPressType.playPause
+        tapGestureRecognizer.allowedPressTypes = [NSNumber(value: pressType.rawValue)];
+        tableView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,6 +67,31 @@ class ListPageViewController: UIViewController {
             target.tag = self.model[indexPath!.row]
         }
     }
+    
+    @objc
+    func selectTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        debugPrint("Accessory button tapped")
+        guard let indexPath = self.indexPath else {
+            debugPrint("Nothing selected.. I'm bailing out")
+            return
+        }
+        let alert = UIAlertController(title: "Tag name", message: "Give tag a custom name", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default) { action in
+            guard let name = alert.textFields?.first?.text else {
+                alert.dismiss(animated: true, completion: nil)
+                return
+            }
+            let tag = self.model[indexPath.row]
+            self.listViewModel.save(tag: tag.uuid!, name: name)
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Custom tag name"
+        })
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension ListPageViewController: UITableViewDataSource {
@@ -72,31 +104,20 @@ extension ListPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: ListPageViewController.InfoCellIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListPageViewController.InfoCellIdentifier)
         let tag = model[indexPath.row]
-        cell?.textLabel?.text = tag.uuid?.uuidString ?? "Unknown"
+        cell?.textLabel?.text = tag.customName ?? tag.uuid?.uuidString ?? "Unknown"
+        cell?.detailTextLabel?.text = tag.uuid?.uuidString ?? ""
+        cell?.accessoryType = .disclosureIndicator
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Tag name", message: "Give tag a custom name", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default) { action in
-            guard let name = alert.textFields?.first?.text,
-                  let tag = self.model[indexPath.row] else {
-                alert.dismiss(animated: true, completion: nil)
-                return
-            }
-            listViewModel.save(tag: tag, name: name)
-        })
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { _ in
-            alert.dismiss(animated: true, completion: nil)
-        })
-        alert.addTextField(configurationHandler: {(textField: UITextField!) in
-            textField.placeholder = "Custom tag name"
-        })
-        self.present(alert, animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexPath = indexPath
     }
     
-    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
+    }
 }
 extension ListPageViewController: UITableViewDelegate {}

@@ -12,6 +12,7 @@ import UIKit
 
 protocol TagRepositoryProtocol {
     func fetchTag(with uuid: UUID) -> RuuviTag?
+    func save(tag uuid: UUID, name: String)
 }
 
 class TagRepository: TagRepositoryProtocol {
