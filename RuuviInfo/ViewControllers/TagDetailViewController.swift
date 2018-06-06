@@ -13,6 +13,13 @@ import Charts
 
 class TagDetailViewController: UIViewController {
     
+    enum lineColor {
+        static let temperature = UIColor(named: "temperatureLine")!
+        static let humidity = UIColor(named: "humidityLine")!
+        static let pressure = UIColor(named: "pressureLine")!
+        
+    }
+    
     @IBOutlet weak var temperatureView: LineChartView!
     @IBOutlet weak var humidityView: LineChartView!
     @IBOutlet weak var pressureView: LineChartView!
@@ -26,9 +33,9 @@ class TagDetailViewController: UIViewController {
     
     fileprivate lazy var viewModel: RuuviTagDetailViewModelProtocol = {
         return RuuviTagDetailViewModel(dataUpdated: { graphModel in
-            self.populate(data: graphModel.temperature, to: self.temperatureView, label: "Celsius", description: "Temperature")
-            self.populate(data: graphModel.humidity, to: self.humidityView, label: "Percentage", description: "Humidity")
-            self.populate(data: graphModel.pressure, to: self.pressureView, label: "mBar", description: "Pressure")
+            self.populate(data: graphModel.temperature, to: self.temperatureView, label: "Celsius", description: "Temperature", lineColor: lineColor.temperature)
+            self.populate(data: graphModel.humidity, to: self.humidityView, label: "Percentage", description: "Humidity", lineColor: lineColor.humidity)
+            self.populate(data: graphModel.pressure, to: self.pressureView, label: "hPa", description: "Pressure", lineColor: lineColor.pressure)
         })
     }()
     
@@ -49,23 +56,40 @@ class TagDetailViewController: UIViewController {
     }
     
     
-    private func populate(data: DataSet, to view: LineChartView, label: String, description: String) {
+    private func populate(data: DataSet, to view: LineChartView, label: String, description: String, lineColor: UIColor) {
         let line = LineChartDataSet(values: data.map({ (time: Date, value: Float) -> ChartDataEntry in
             return ChartDataEntry(x: Double(time.timeIntervalSince1970), y: Double(value))
         }), label: label)
         
-        line.colors = [UIColor.blue]
+        // line.colors = [UIColor.red]
         // line.circleRadius = 2.0
         line.drawCirclesEnabled = false
-        line.mode = .linear
+        line.mode = .horizontalBezier
+        line.lineWidth = 3.5
+        line.setColor(lineColor, alpha: 0.95)
+        line.fillAlpha = 0.7
         
         let data = LineChartData()
         data.addDataSet(line)
         data.setDrawValues(true)
         view.data = data
         view.setScaleEnabled(false)
+        view.chartDescription?.font = UIFont.boldSystemFont(ofSize: 250.0)
         view.chartDescription?.text = description
+        view.chartDescription?.textColor = UIColor(named: "textColor")!.withAlphaComponent(0.1)
+        
+        view.xAxis.labelFont = UIFont.systemFont(ofSize: 15.0)
+        view.xAxis.labelTextColor = UIColor(named:"textColor")!
+        view.getAxis(.left).labelFont = UIFont.systemFont(ofSize: 15.0)
+        view.getAxis(.right).labelFont = UIFont.systemFont(ofSize: 15.0)
+        view.getAxis(.left).labelTextColor = UIColor(named:"textColor")!
+        view.getAxis(.right).labelTextColor = UIColor(named:"textColor")!
+        
         view.xAxis.valueFormatter = CustomDateFormatter()
+        view.backgroundColor = UIColor(named: "background")!
+        view.gridBackgroundColor = UIColor(named: "background")!
+        view.legend.textColor = UIColor(named: "textColor")!
+        view.legend.font = UIFont.systemFont(ofSize: 15.0)
     }
 }
 

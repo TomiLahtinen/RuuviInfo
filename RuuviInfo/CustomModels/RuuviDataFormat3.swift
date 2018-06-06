@@ -57,12 +57,14 @@ struct DataFormat3 {
 
 extension SensorValues {
     func insert(data rawData: DataFormat3) {
-        self.humidity = Int16(rawData.humidity)
+        debugPrint("Data version", rawData.version)
+        self.humidity = Int16(rawData.humidity) / 2
         self.temperature = Float(rawData.temperatureWhole) + (Float(rawData.temperatureFraction) / 100.0)
-        self.pressure = Int32(rawData.pressure) - 50_000
+        self.pressure = Int32(rawData.pressure) - 50000
         self.accelerationX = Int16(rawData.accelerationX)
         self.accelerationY = Int16(rawData.accelerationY)
         self.accelerationZ = Int16(rawData.accelerationZ)
+        debugPrint(rawData.voltage)
         self.voltage = Int16(rawData.voltage)
     }
 }

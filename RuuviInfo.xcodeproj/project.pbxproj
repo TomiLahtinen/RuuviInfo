@@ -26,6 +26,7 @@
 		563075AC20C7C1820013147D /* TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161D20C0277A00667FED /* TagInfo.swift */; };
 		563075AD20C7C1820013147D /* RuuviDataFormat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */; };
 		563075AE20C7C1820013147D /* SensorGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */; };
+		563075AF20C7F5F10013147D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EF20C0211F00667FED /* Assets.xcassets */; };
 		56595BD920C55AC100D93500 /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BD820C55AC100D93500 /* TagDetailViewController.swift */; };
 		56595BDB20C6680100D93500 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDA20C6680100D93500 /* TagRepository.swift */; };
 		56595BDD20C68E6C00D93500 /* SensorGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */; };
@@ -522,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5630757E20C7C0DD0013147D /* Assets.xcassets in Resources */,
+				563075AF20C7F5F10013147D /* Assets.xcassets in Resources */,
 				5630757C20C7C0DB0013147D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
