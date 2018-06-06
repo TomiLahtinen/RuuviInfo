@@ -13,6 +13,8 @@ protocol RuuviTagListViewModelProtocol {
     init(didUpdateTags: @escaping ([RuuviTag]) -> (),
          didUpdateTag: @escaping (RuuviTag) -> ())
     
+    func save(tag uuid: UUID, name: String)
+    
     func startScanningTags()
     func stopScanningTags()
     
@@ -35,6 +37,10 @@ class RuuviTagListViewModel: RuuviTagListViewModelProtocol {
         
         self.didUpdateTags = didUpdateTags
         self.didUpdateTag = didUpdateTag
+    }
+    
+    func save(tag uuid: UUID, name: String) {
+        // TODO
     }
     
     func startScanningTags() {

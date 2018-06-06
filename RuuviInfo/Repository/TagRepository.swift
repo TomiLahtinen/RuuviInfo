@@ -33,4 +33,12 @@ class TagRepository: TagRepositoryProtocol {
             fatalError("Failed to fetch tags \(error)")
         }
     }
+    
+    func save(tag uuid: UUID, name: String) {
+        guard let tag = fetchTag(with: uuid) else {
+            fatalError("No such tag \(uuid.uuidString)")
+        }
+        tag.customName = name
+        try? managedContext.save()
+    }
 }

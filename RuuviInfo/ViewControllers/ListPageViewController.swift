@@ -78,5 +78,25 @@ extension ListPageViewController: UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Tag name", message: "Give tag a custom name", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default) { action in
+            guard let name = alert.textFields?.first?.text,
+                  let tag = self.model[indexPath.row] else {
+                alert.dismiss(animated: true, completion: nil)
+                return
+            }
+            listViewModel.save(tag: tag, name: name)
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { _ in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Custom tag name"
+        })
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 extension ListPageViewController: UITableViewDelegate {}
