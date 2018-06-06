@@ -8,15 +8,6 @@
 
 import Foundation
 
-struct RuuviTag: Equatable {
-    
-    let UUID: String
-    let name: String
-    
-    let info: TagInfo?
-    
-}
-
 func ==(lhs: RuuviTag, rhs: RuuviTag) -> Bool {
-    return lhs.UUID == rhs.UUID
+    return lhs.uuid?.uuidString == rhs.uuid?.uuidString
 }

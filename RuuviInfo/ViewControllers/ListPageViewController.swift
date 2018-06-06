@@ -11,10 +11,15 @@ import UIKit
 
 class ListPageViewController: UIViewController {
     
+    static let InfoCellIdentifier = "RuuviInfoCell"
+    
     @IBOutlet weak var tableView: UITableView!
     
     var model: [RuuviTag] = [] {
         didSet {
+            model.sort { (tag1, tag2) -> Bool in
+                return tag1.uuid?.uuidString ?? "" < tag2.uuid?.uuidString ?? ""
+            }
             self.tableView.reloadData()
         }
     }
@@ -48,11 +53,18 @@ class ListPageViewController: UIViewController {
         super.viewDidDisappear(animated)
         listViewModel.stopScanningTags()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tagDetailSegue", let target = segue.destination as? TagDetailViewController {
+            let indexPath = tableView.indexPathForSelectedRow
+            target.tag = self.model[indexPath!.row]
+        }
+    }
 }
 
 extension ListPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return model.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,7 +72,10 @@ extension ListPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.cellForRow(at: indexPath)!
+        var cell = tableView.dequeueReusableCell(withIdentifier: ListPageViewController.InfoCellIdentifier)
+        let tag = model[indexPath.row]
+        cell?.textLabel?.text = tag.uuid?.uuidString ?? "Unknown"
+        return cell!
     }
     
 }

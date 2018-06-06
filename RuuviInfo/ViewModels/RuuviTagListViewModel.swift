@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RuuviTagListViewModelProtocol {
     init(didUpdateTags: @escaping ([RuuviTag]) -> (),
@@ -19,13 +20,13 @@ protocol RuuviTagListViewModelProtocol {
 
 
 class RuuviTagListViewModel: RuuviTagListViewModelProtocol {
-    
+
     let didUpdateTags: ([RuuviTag]) -> ()
     let didUpdateTag: (RuuviTag) -> ()
     
     fileprivate lazy var repository: BLEDeviceRepository = {
         return BLEDeviceRepository(deviceAdvertisementReceived: { tag in
-            debugPrint("Tag at model", tag)
+            self.didUpdateTag(tag)
         })
     }()
     
@@ -37,12 +38,10 @@ class RuuviTagListViewModel: RuuviTagListViewModelProtocol {
     }
     
     func startScanningTags() {
-        // TODO
+        repository.startScanningForDevices()
     }
     
     func stopScanningTags() {
         // TODO
     }
-    
-    
 }

@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7FAB917DEA6D003147899C /* Pods_RuuviInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FDA12CEA6C617BBBE544E /* Pods_RuuviInfo.framework */; };
+		5630756C20C6B3290013147D /* RuuviTagDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630756B20C6B3290013147D /* RuuviTagDetailViewModel.swift */; };
+		5630757420C7C0DB0013147D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630757320C7C0DB0013147D /* AppDelegate.swift */; };
+		5630757C20C7C0DB0013147D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5630757A20C7C0DB0013147D /* Main.storyboard */; };
+		5630757E20C7C0DD0013147D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5630757D20C7C0DD0013147D /* Assets.xcassets */; };
+		5630758920C7C0DE0013147D /* RuuviInfoTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630758820C7C0DE0013147D /* RuuviInfoTVTests.swift */; };
+		5630759420C7C0DE0013147D /* RuuviInfoTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630759320C7C0DE0013147D /* RuuviInfoTVUITests.swift */; };
+		5630759F20C7C0F70013147D /* RuuviInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA4020C1559F004B6C00 /* RuuviInfo.xcdatamodeld */; };
+		563075A020C7C1210013147D /* ListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161620C025F800667FED /* ListPageViewController.swift */; };
+		563075A120C7C1810013147D /* RuuviTagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162120C0281300667FED /* RuuviTagListViewModel.swift */; };
+		563075A220C7C1810013147D /* RuuviTagDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630756B20C6B3290013147D /* RuuviTagDetailViewModel.swift */; };
+		563075A320C7C1810013147D /* BLEDeviceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162320C11F9300667FED /* BLEDeviceRepository.swift */; };
+		563075A420C7C1810013147D /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDA20C6680100D93500 /* TagRepository.swift */; };
+		563075A520C7C1810013147D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515EA20C0211E00667FED /* PageViewController.swift */; };
+		563075A620C7C1810013147D /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BD820C55AC100D93500 /* TagDetailViewController.swift */; };
+		563075AB20C7C1820013147D /* RuuviTag+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */; };
+		563075AC20C7C1820013147D /* TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161D20C0277A00667FED /* TagInfo.swift */; };
+		563075AD20C7C1820013147D /* RuuviDataFormat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */; };
+		563075AE20C7C1820013147D /* SensorGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */; };
+		56595BD920C55AC100D93500 /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BD820C55AC100D93500 /* TagDetailViewController.swift */; };
+		56595BDB20C6680100D93500 /* TagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDA20C6680100D93500 /* TagRepository.swift */; };
+		56595BDD20C68E6C00D93500 /* SensorGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */; };
 		56A515E920C0211E00667FED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515E820C0211E00667FED /* AppDelegate.swift */; };
 		56A515EB20C0211E00667FED /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515EA20C0211E00667FED /* PageViewController.swift */; };
 		56A515EE20C0211E00667FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EC20C0211E00667FED /* Main.storyboard */; };
@@ -15,13 +37,31 @@
 		56A515FE20C0212000667FED /* RuuviInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A515FD20C0212000667FED /* RuuviInfoTests.swift */; };
 		56A5160920C0212000667FED /* RuuviInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5160820C0212000667FED /* RuuviInfoUITests.swift */; };
 		56A5161720C025F800667FED /* ListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161620C025F800667FED /* ListPageViewController.swift */; };
-		56A5161C20C0274E00667FED /* RuuviTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161B20C0274E00667FED /* RuuviTag.swift */; };
+		56A5161C20C0274E00667FED /* RuuviTag+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */; };
 		56A5161E20C0277A00667FED /* TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161D20C0277A00667FED /* TagInfo.swift */; };
 		56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162120C0281300667FED /* RuuviTagListViewModel.swift */; };
 		56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162320C11F9300667FED /* BLEDeviceRepository.swift */; };
+		56D4EA3F20C14527004B6C00 /* RuuviDataFormat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */; };
+		56D4EA4220C1559F004B6C00 /* RuuviInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA4020C1559F004B6C00 /* RuuviInfo.xcdatamodeld */; };
+		56D4EA8220C17820004B6C00 /* RuuviTag+Accessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA8120C17820004B6C00 /* RuuviTag+Accessor.swift */; };
+		9F907DF4473607C3B754E746 /* Pods_RuuviInfoTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051D6903B2332BD813A809E3 /* Pods_RuuviInfoTV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5630758520C7C0DE0013147D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56A515DD20C0211D00667FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5630757020C7C0DB0013147D;
+			remoteInfo = RuuviInfoTV;
+		};
+		5630759020C7C0DE0013147D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56A515DD20C0211D00667FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5630757020C7C0DB0013147D;
+			remoteInfo = RuuviInfoTV;
+		};
 		56A515FA20C0212000667FED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 56A515DD20C0211D00667FED /* Project object */;
@@ -39,6 +79,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051D6903B2332BD813A809E3 /* Pods_RuuviInfoTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuuviInfoTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2053D6046DAD77C3243A18CC /* Pods-RuuviInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuuviInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo.release.xcconfig"; sourceTree = "<group>"; };
+		5630756B20C6B3290013147D /* RuuviTagDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTagDetailViewModel.swift; sourceTree = "<group>"; };
+		5630757120C7C0DB0013147D /* RuuviInfoTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuuviInfoTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5630757320C7C0DB0013147D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5630757B20C7C0DB0013147D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5630757D20C7C0DD0013147D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5630757F20C7C0DD0013147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5630758420C7C0DE0013147D /* RuuviInfoTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuuviInfoTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5630758820C7C0DE0013147D /* RuuviInfoTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoTVTests.swift; sourceTree = "<group>"; };
+		5630758A20C7C0DE0013147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5630758F20C7C0DE0013147D /* RuuviInfoTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuuviInfoTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5630759320C7C0DE0013147D /* RuuviInfoTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoTVUITests.swift; sourceTree = "<group>"; };
+		5630759520C7C0DE0013147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56595BD820C55AC100D93500 /* TagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDetailViewController.swift; sourceTree = "<group>"; };
+		56595BDA20C6680100D93500 /* TagRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagRepository.swift; sourceTree = "<group>"; };
+		56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorGraphModel.swift; sourceTree = "<group>"; };
 		56A515E520C0211E00667FED /* RuuviInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuuviInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A515E820C0211E00667FED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56A515EA20C0211E00667FED /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -53,17 +110,47 @@
 		56A5160820C0212000667FED /* RuuviInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviInfoUITests.swift; sourceTree = "<group>"; };
 		56A5160A20C0212000667FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56A5161620C025F800667FED /* ListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewController.swift; sourceTree = "<group>"; };
-		56A5161B20C0274E00667FED /* RuuviTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTag.swift; sourceTree = "<group>"; };
+		56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RuuviTag+Equatable.swift"; sourceTree = "<group>"; };
 		56A5161D20C0277A00667FED /* TagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInfo.swift; sourceTree = "<group>"; };
 		56A5162120C0281300667FED /* RuuviTagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTagListViewModel.swift; sourceTree = "<group>"; };
 		56A5162320C11F9300667FED /* BLEDeviceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDeviceRepository.swift; sourceTree = "<group>"; };
+		56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviDataFormat3.swift; sourceTree = "<group>"; };
+		56D4EA4120C1559F004B6C00 /* TagModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TagModel.xcdatamodel; sourceTree = "<group>"; };
+		56D4EA8120C17820004B6C00 /* RuuviTag+Accessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RuuviTag+Accessor.swift"; sourceTree = "<group>"; };
+		5A66BF68425C8B30A5D66B83 /* Pods-RuuviInfoTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuuviInfoTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV.debug.xcconfig"; sourceTree = "<group>"; };
+		6D0FDA12CEA6C617BBBE544E /* Pods_RuuviInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuuviInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F6B6E0608542A29CA27120 /* Pods-RuuviInfoTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuuviInfoTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV.release.xcconfig"; sourceTree = "<group>"; };
+		BAF27C50DAB2A70FFA544472 /* Pods-RuuviInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuuviInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5630756E20C7C0DB0013147D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F907DF4473607C3B754E746 /* Pods_RuuviInfoTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758120C7C0DE0013147D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758C20C7C0DE0013147D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56A515E220C0211D00667FED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7FAB917DEA6D003147899C /* Pods_RuuviInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,13 +171,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5630757220C7C0DB0013147D /* RuuviInfoTV */ = {
+			isa = PBXGroup;
+			children = (
+				5630757320C7C0DB0013147D /* AppDelegate.swift */,
+				5630757A20C7C0DB0013147D /* Main.storyboard */,
+				5630757D20C7C0DD0013147D /* Assets.xcassets */,
+				5630757F20C7C0DD0013147D /* Info.plist */,
+			);
+			path = RuuviInfoTV;
+			sourceTree = "<group>";
+		};
+		5630758720C7C0DE0013147D /* RuuviInfoTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				5630758820C7C0DE0013147D /* RuuviInfoTVTests.swift */,
+				5630758A20C7C0DE0013147D /* Info.plist */,
+			);
+			path = RuuviInfoTVTests;
+			sourceTree = "<group>";
+		};
+		5630759220C7C0DE0013147D /* RuuviInfoTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5630759320C7C0DE0013147D /* RuuviInfoTVUITests.swift */,
+				5630759520C7C0DE0013147D /* Info.plist */,
+			);
+			path = RuuviInfoTVUITests;
+			sourceTree = "<group>";
+		};
 		56A515DC20C0211D00667FED = {
 			isa = PBXGroup;
 			children = (
 				56A515E720C0211E00667FED /* RuuviInfo */,
 				56A515FC20C0212000667FED /* RuuviInfoTests */,
 				56A5160720C0212000667FED /* RuuviInfoUITests */,
+				5630757220C7C0DB0013147D /* RuuviInfoTV */,
+				5630758720C7C0DE0013147D /* RuuviInfoTVTests */,
+				5630759220C7C0DE0013147D /* RuuviInfoTVUITests */,
 				56A515E620C0211E00667FED /* Products */,
+				DD661A8A8F22C6FE4E986E3C /* Pods */,
+				E00B3625E57EAA99EBFD8948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +221,9 @@
 				56A515E520C0211E00667FED /* RuuviInfo.app */,
 				56A515F920C0212000667FED /* RuuviInfoTests.xctest */,
 				56A5160420C0212000667FED /* RuuviInfoUITests.xctest */,
+				5630757120C7C0DB0013147D /* RuuviInfoTV.app */,
+				5630758420C7C0DE0013147D /* RuuviInfoTVTests.xctest */,
+				5630758F20C7C0DE0013147D /* RuuviInfoTVUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,14 +231,16 @@
 		56A515E720C0211E00667FED /* RuuviInfo */ = {
 			isa = PBXGroup;
 			children = (
+				56D4EA8020C17803004B6C00 /* Extension */,
 				56A5162020C027FE00667FED /* ViewModels */,
 				56A5161F20C027E400667FED /* Repository */,
 				56A5161A20C0272E00667FED /* Storyboards */,
 				56A5161920C0272000667FED /* ViewControllers */,
-				56A5161820C0271600667FED /* Models */,
+				56A5161820C0271600667FED /* CustomModels */,
 				56A515E820C0211E00667FED /* AppDelegate.swift */,
 				56A515EF20C0211F00667FED /* Assets.xcassets */,
 				56A515F420C0211F00667FED /* Info.plist */,
+				56D4EA4020C1559F004B6C00 /* RuuviInfo.xcdatamodeld */,
 			);
 			path = RuuviInfo;
 			sourceTree = "<group>";
@@ -137,13 +263,15 @@
 			path = RuuviInfoUITests;
 			sourceTree = "<group>";
 		};
-		56A5161820C0271600667FED /* Models */ = {
+		56A5161820C0271600667FED /* CustomModels */ = {
 			isa = PBXGroup;
 			children = (
-				56A5161B20C0274E00667FED /* RuuviTag.swift */,
+				56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */,
 				56A5161D20C0277A00667FED /* TagInfo.swift */,
+				56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */,
+				56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */,
 			);
-			path = Models;
+			path = CustomModels;
 			sourceTree = "<group>";
 		};
 		56A5161920C0272000667FED /* ViewControllers */ = {
@@ -151,6 +279,7 @@
 			children = (
 				56A515EA20C0211E00667FED /* PageViewController.swift */,
 				56A5161620C025F800667FED /* ListPageViewController.swift */,
+				56595BD820C55AC100D93500 /* TagDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				56A5162320C11F9300667FED /* BLEDeviceRepository.swift */,
+				56595BDA20C6680100D93500 /* TagRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -176,20 +306,108 @@
 			isa = PBXGroup;
 			children = (
 				56A5162120C0281300667FED /* RuuviTagListViewModel.swift */,
+				5630756B20C6B3290013147D /* RuuviTagDetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		56D4EA8020C17803004B6C00 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				56D4EA8120C17820004B6C00 /* RuuviTag+Accessor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DD661A8A8F22C6FE4E986E3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAF27C50DAB2A70FFA544472 /* Pods-RuuviInfo.debug.xcconfig */,
+				2053D6046DAD77C3243A18CC /* Pods-RuuviInfo.release.xcconfig */,
+				5A66BF68425C8B30A5D66B83 /* Pods-RuuviInfoTV.debug.xcconfig */,
+				95F6B6E0608542A29CA27120 /* Pods-RuuviInfoTV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E00B3625E57EAA99EBFD8948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D0FDA12CEA6C617BBBE544E /* Pods_RuuviInfo.framework */,
+				051D6903B2332BD813A809E3 /* Pods_RuuviInfoTV.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5630757020C7C0DB0013147D /* RuuviInfoTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5630759620C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTV" */;
+			buildPhases = (
+				D7D06A9CC3FA2E5D3C033D9B /* [CP] Check Pods Manifest.lock */,
+				5630756D20C7C0DB0013147D /* Sources */,
+				5630756E20C7C0DB0013147D /* Frameworks */,
+				5630756F20C7C0DB0013147D /* Resources */,
+				D37E2B8C8711589E43569CE9 /* [CP] Embed Pods Frameworks */,
+				3B12EF1280B949F2494914ED /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuuviInfoTV;
+			productName = RuuviInfoTV;
+			productReference = 5630757120C7C0DB0013147D /* RuuviInfoTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5630758320C7C0DE0013147D /* RuuviInfoTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5630759920C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTVTests" */;
+			buildPhases = (
+				5630758020C7C0DE0013147D /* Sources */,
+				5630758120C7C0DE0013147D /* Frameworks */,
+				5630758220C7C0DE0013147D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5630758620C7C0DE0013147D /* PBXTargetDependency */,
+			);
+			name = RuuviInfoTVTests;
+			productName = RuuviInfoTVTests;
+			productReference = 5630758420C7C0DE0013147D /* RuuviInfoTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5630758E20C7C0DE0013147D /* RuuviInfoTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5630759C20C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTVUITests" */;
+			buildPhases = (
+				5630758B20C7C0DE0013147D /* Sources */,
+				5630758C20C7C0DE0013147D /* Frameworks */,
+				5630758D20C7C0DE0013147D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5630759120C7C0DE0013147D /* PBXTargetDependency */,
+			);
+			name = RuuviInfoTVUITests;
+			productName = RuuviInfoTVUITests;
+			productReference = 5630758F20C7C0DE0013147D /* RuuviInfoTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		56A515E420C0211D00667FED /* RuuviInfo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56A5160D20C0212000667FED /* Build configuration list for PBXNativeTarget "RuuviInfo" */;
 			buildPhases = (
+				92CB2CC8D48559F83BE6F28D /* [CP] Check Pods Manifest.lock */,
 				56A515E120C0211D00667FED /* Sources */,
 				56A515E220C0211D00667FED /* Frameworks */,
 				56A515E320C0211D00667FED /* Resources */,
+				F89C85F01A10E1F2E732DC1F /* [CP] Embed Pods Frameworks */,
+				132B7836A15638C981D494DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,10 +460,21 @@
 		56A515DD20C0211D00667FED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tomi Lahtinen";
 				TargetAttributes = {
+					5630757020C7C0DB0013147D = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					5630758320C7C0DE0013147D = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 5630757020C7C0DB0013147D;
+					};
+					5630758E20C7C0DE0013147D = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 5630757020C7C0DB0013147D;
+					};
 					56A515E420C0211D00667FED = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
@@ -280,11 +509,37 @@
 				56A515E420C0211D00667FED /* RuuviInfo */,
 				56A515F820C0212000667FED /* RuuviInfoTests */,
 				56A5160320C0212000667FED /* RuuviInfoUITests */,
+				5630757020C7C0DB0013147D /* RuuviInfoTV */,
+				5630758320C7C0DE0013147D /* RuuviInfoTVTests */,
+				5630758E20C7C0DE0013147D /* RuuviInfoTVUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5630756F20C7C0DB0013147D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630757E20C7C0DD0013147D /* Assets.xcassets in Resources */,
+				5630757C20C7C0DB0013147D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758220C7C0DE0013147D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758D20C7C0DE0013147D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56A515E320C0211D00667FED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,17 +566,169 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		132B7836A15638C981D494DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B12EF1280B949F2494914ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92CB2CC8D48559F83BE6F28D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuuviInfo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D37E2B8C8711589E43569CE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftBytes-tvOS/SwiftBytes.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBytes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7D06A9CC3FA2E5D3C033D9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuuviInfoTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89C85F01A10E1F2E732DC1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts-iOS/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftBytes-iOS/SwiftBytes.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBytes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5630756D20C7C0DB0013147D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630759F20C7C0F70013147D /* RuuviInfo.xcdatamodeld in Sources */,
+				563075A120C7C1810013147D /* RuuviTagListViewModel.swift in Sources */,
+				5630757420C7C0DB0013147D /* AppDelegate.swift in Sources */,
+				563075A320C7C1810013147D /* BLEDeviceRepository.swift in Sources */,
+				563075A420C7C1810013147D /* TagRepository.swift in Sources */,
+				563075A620C7C1810013147D /* TagDetailViewController.swift in Sources */,
+				563075AE20C7C1820013147D /* SensorGraphModel.swift in Sources */,
+				563075A220C7C1810013147D /* RuuviTagDetailViewModel.swift in Sources */,
+				563075AC20C7C1820013147D /* TagInfo.swift in Sources */,
+				563075AB20C7C1820013147D /* RuuviTag+Equatable.swift in Sources */,
+				563075A020C7C1210013147D /* ListPageViewController.swift in Sources */,
+				563075AD20C7C1820013147D /* RuuviDataFormat3.swift in Sources */,
+				563075A520C7C1810013147D /* PageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758020C7C0DE0013147D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630758920C7C0DE0013147D /* RuuviInfoTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5630758B20C7C0DE0013147D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5630759420C7C0DE0013147D /* RuuviInfoTVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56A515E120C0211D00667FED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56595BD920C55AC100D93500 /* TagDetailViewController.swift in Sources */,
+				56D4EA4220C1559F004B6C00 /* RuuviInfo.xcdatamodeld in Sources */,
 				56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */,
-				56A5161C20C0274E00667FED /* RuuviTag.swift in Sources */,
+				56A5161C20C0274E00667FED /* RuuviTag+Equatable.swift in Sources */,
+				56D4EA3F20C14527004B6C00 /* RuuviDataFormat3.swift in Sources */,
 				56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */,
+				56595BDD20C68E6C00D93500 /* SensorGraphModel.swift in Sources */,
 				56A5161720C025F800667FED /* ListPageViewController.swift in Sources */,
 				56A515EB20C0211E00667FED /* PageViewController.swift in Sources */,
+				56D4EA8220C17820004B6C00 /* RuuviTag+Accessor.swift in Sources */,
+				5630756C20C6B3290013147D /* RuuviTagDetailViewModel.swift in Sources */,
 				56A5161E20C0277A00667FED /* TagInfo.swift in Sources */,
+				56595BDB20C6680100D93500 /* TagRepository.swift in Sources */,
 				56A515E920C0211E00667FED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +752,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5630758620C7C0DE0013147D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5630757020C7C0DB0013147D /* RuuviInfoTV */;
+			targetProxy = 5630758520C7C0DE0013147D /* PBXContainerItemProxy */;
+		};
+		5630759120C7C0DE0013147D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5630757020C7C0DB0013147D /* RuuviInfoTV */;
+			targetProxy = 5630759020C7C0DE0013147D /* PBXContainerItemProxy */;
+		};
 		56A515FB20C0212000667FED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 56A515E420C0211D00667FED /* RuuviInfo */;
@@ -358,6 +775,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5630757A20C7C0DB0013147D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5630757B20C7C0DB0013147D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		56A515EC20C0211E00667FED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -377,6 +802,136 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5630759720C7C0DE0013147D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A66BF68425C8B30A5D66B83 /* Pods-RuuviInfoTV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4WY84DJNW;
+				INFOPLIST_FILE = RuuviInfoTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		5630759820C7C0DE0013147D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95F6B6E0608542A29CA27120 /* Pods-RuuviInfoTV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4WY84DJNW;
+				INFOPLIST_FILE = RuuviInfoTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		5630759A20C7C0DE0013147D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RuuviInfoTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuuviInfoTV.app/RuuviInfoTV";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		5630759B20C7C0DE0013147D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RuuviInfoTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuuviInfoTV.app/RuuviInfoTV";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		5630759D20C7C0DE0013147D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RuuviInfoTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = RuuviInfoTV;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		5630759E20C7C0DE0013147D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RuuviInfoTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fi.solita.cds.RuuviInfoTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = RuuviInfoTV;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		56A5160B20C0212000667FED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -493,6 +1048,7 @@
 		};
 		56A5160E20C0212000667FED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF27C50DAB2A70FFA544472 /* Pods-RuuviInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +1067,7 @@
 		};
 		56A5160F20C0212000667FED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2053D6046DAD77C3243A18CC /* Pods-RuuviInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,6 +1169,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5630759620C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5630759720C7C0DE0013147D /* Debug */,
+				5630759820C7C0DE0013147D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5630759920C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5630759A20C7C0DE0013147D /* Debug */,
+				5630759B20C7C0DE0013147D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5630759C20C7C0DE0013147D /* Build configuration list for PBXNativeTarget "RuuviInfoTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5630759D20C7C0DE0013147D /* Debug */,
+				5630759E20C7C0DE0013147D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		56A515E020C0211D00667FED /* Build configuration list for PBXProject "RuuviInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -649,6 +1233,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		56D4EA4020C1559F004B6C00 /* RuuviInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				56D4EA4120C1559F004B6C00 /* TagModel.xcdatamodel */,
+			);
+			currentVersion = 56D4EA4120C1559F004B6C00 /* TagModel.xcdatamodel */;
+			path = RuuviInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 56A515DD20C0211D00667FED /* Project object */;
 }

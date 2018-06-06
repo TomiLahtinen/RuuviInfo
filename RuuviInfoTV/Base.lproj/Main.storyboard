@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListPageViewController" customModule="RuuviInfoTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="B5Q-nx-xbw">
+                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RuuviInfoCell" textLabel="M2k-lF-gL5" detailTextLabel="aaV-Bg-xBf" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="q19-hQ-lEf">
+                                        <rect key="frame" x="0.0" y="66" width="1740" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q19-hQ-lEf" id="iZE-Ph-GLE">
+                                            <rect key="frame" x="0.0" y="0.0" width="1740" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M2k-lF-gL5">
+                                                    <rect key="frame" x="20" y="4" width="72" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aaV-Bg-xBf">
+                                                    <rect key="frame" x="20" y="50" width="128" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fcx-DQ-IDZ" kind="show" identifier="tagDetailSegue" id="nGo-jd-g2p"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B5Q-nx-xbw" firstAttribute="top" secondItem="wu6-TO-1qx" secondAttribute="top" id="B8H-tM-9nx"/>
+                            <constraint firstItem="B5Q-nx-xbw" firstAttribute="height" secondItem="wu6-TO-1qx" secondAttribute="height" id="dTv-bN-JUA"/>
+                            <constraint firstItem="B5Q-nx-xbw" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" id="dvK-66-wD8"/>
+                            <constraint firstItem="B5Q-nx-xbw" firstAttribute="width" secondItem="wu6-TO-1qx" secondAttribute="width" id="uVF-d7-aCh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="B5Q-nx-xbw" id="e5r-ig-P6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Tag Detail View Controller-->
+        <scene sceneID="BeS-Al-ubn">
+            <objects>
+                <viewController id="fcx-DQ-IDZ" customClass="TagDetailViewController" customModule="RuuviInfoTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9RG-lH-Z84"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZU-Wu-ACX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRz-Db-LIX">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pjz-LB-PH0">
+                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="St9-aq-Paw" userLabel="TemperatureView" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="1740" height="317"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl5-cT-wxl" userLabel="HumidityView" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="321" width="1740" height="318"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-00-a2s" userLabel="PressureView" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="643" width="1740" height="317"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pjz-LB-PH0" firstAttribute="width" secondItem="3g5-2i-8pX" secondAttribute="width" id="1Ee-JL-LRC"/>
+                            <constraint firstItem="pjz-LB-PH0" firstAttribute="leading" secondItem="3g5-2i-8pX" secondAttribute="leading" id="8Tq-sD-fZ6"/>
+                            <constraint firstItem="pjz-LB-PH0" firstAttribute="top" secondItem="3g5-2i-8pX" secondAttribute="top" id="8aL-ry-apu"/>
+                            <constraint firstItem="pjz-LB-PH0" firstAttribute="height" secondItem="3g5-2i-8pX" secondAttribute="height" id="q4Y-xQ-fWY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3g5-2i-8pX"/>
+                    </view>
+                    <connections>
+                        <outlet property="humidityView" destination="rl5-cT-wxl" id="Pi7-sz-7fx"/>
+                        <outlet property="pressureView" destination="OKJ-00-a2s" id="evA-p7-M8T"/>
+                        <outlet property="temperatureView" destination="St9-aq-Paw" id="hzX-D0-jV4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dww-XA-PWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693" y="1161"/>
+        </scene>
+    </scenes>
+</document>

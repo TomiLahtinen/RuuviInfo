@@ -8,6 +8,8 @@
 
 import Foundation
 import CoreBluetooth
+import UIKit
+import CoreData
 
 protocol BLEDeviceRepositoryProtocol {
     
@@ -23,6 +25,13 @@ protocol BLEDeviceRepositoryProtocol {
 
 class BLEDeviceRepository: NSObject, BLEDeviceRepositoryProtocol {
     
+    fileprivate lazy var appDelegate: AppDelegate = {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("No AppDelegate available???")
+        }
+        return delegate
+    }()
+    
     let dataKey = "kCBAdvDataManufacturerData"
     
     let deviceAdvertisementReceived: (RuuviTag) -> ()
@@ -33,15 +42,11 @@ class BLEDeviceRepository: NSObject, BLEDeviceRepositoryProtocol {
         
         let opts = [CBCentralManagerOptionShowPowerAlertKey: true]
         centralManager = CBCentralManager(delegate: nil, queue: DispatchQueue.main, options: opts)
-        
         super.init()
-        
         centralManager.delegate = self
     }
     
-    func startScanningForDevices() {
-        centralManager.scanForPeripherals(withServices: nil, options: nil)
-    }
+    func startScanningForDevices() {}
     
     func stopScanningForDevices() {
         
@@ -61,16 +66,61 @@ extension BLEDeviceRepository: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
-            debugPrint("Powered on")
+            centralManager.scanForPeripherals(withServices: nil, options: nil)
         case .poweredOff:
             debugPrint("Powered off")
         default:
-            debugPrint("Oh never mind", central.state)
+            debugPrint("Oh never mind", central.state.rawValue)
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        debugPrint(peripheral.name)
-        debugPrint("Manufacturer", advertisementData[dataKey])
+        if let manufacturerData = advertisementData[CBAdvertisementDataManufacturerDataKey],
+           let rawData = DataFormat3.decode(data: manufacturerData as? Data){
+            debugPrint("RuuviTag data received")
+            let managedContext = appDelegate.persistentContainer.viewContext
+            // Has we tag in almighty CoreData
+            let tag = fetchTagOrCreate(for: peripheral, with: rawData, in: managedContext)
+            createObservation(from: rawData, for: tag, in: managedContext)
+            do {
+                try managedContext.save()
+                deviceAdvertisementReceived(tag)
+                NotificationCenter.default.post(name: Notification.Name.ruuviData, object: nil)
+            } catch let error as NSError {
+                print("Could not save tag \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
+    func fetchTagOrCreate(for peripheral: CBPeripheral, with data: DataFormat3, in context: NSManagedObjectContext) -> RuuviTag {
+        let tagsFetch = NSFetchRequest<RuuviTag>(entityName: "RuuviTag")
+        tagsFetch.predicate = NSPredicate(format: "%K == %@", "uuid", peripheral.identifier as CVarArg)
+        do {
+            let fetchedTags = try context.fetch(tagsFetch) as [RuuviTag]
+            guard let tag = fetchedTags.first else {
+                let tag = NSEntityDescription.insertNewObject(forEntityName: "RuuviTag", into: context) as! RuuviTag
+                tag.uuid = peripheral.identifier
+                tag.name = peripheral.name ?? "Unknown"
+                tag.customName = ""
+                return tag
+            }
+            return tag
+         }
+        catch {
+            fatalError("Failed to fetch tags \(error)")
+        }
+    }
+    
+    func createObservation(from data: DataFormat3, for tag: RuuviTag, in context: NSManagedObjectContext) {
+        let value = NSEntityDescription.insertNewObject(forEntityName: "SensorValues", into: context) as! SensorValues
+        value.insert(data: data)
+        value.timestamp = Date()
+        if tag.sensorValues?.count == 0 {
+            tag.sensorValues = NSSet(object: value)
+        }
+        else {
+            tag.sensorValues = tag.sensorValues?.adding(value) as! NSSet
+        }
+        
     }
 }
