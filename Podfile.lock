@@ -8,6 +8,10 @@ DEPENDENCIES:
   - Charts
   - SwiftBytes (from `https://github.com/Tombio/swift-bytes.git`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+
 EXTERNAL SOURCES:
   SwiftBytes:
     :git: https://github.com/Tombio/swift-bytes.git
@@ -23,4 +27,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 21f7e5043ce1bd7be37dbf3613ebc4cacc2b5767
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
