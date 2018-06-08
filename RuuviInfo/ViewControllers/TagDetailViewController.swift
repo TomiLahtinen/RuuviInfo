@@ -33,9 +33,11 @@ class TagDetailViewController: UIViewController {
     
     fileprivate lazy var viewModel: RuuviTagDetailViewModelProtocol = {
         return RuuviTagDetailViewModel(dataUpdated: { graphModel in
-            self.populate(data: graphModel.temperature, to: self.temperatureView, label: "Celsius", description: "Temperature", lineColor: lineColor.temperature)
-            self.populate(data: graphModel.humidity, to: self.humidityView, label: "Percentage", description: "Humidity", lineColor: lineColor.humidity)
-            self.populate(data: graphModel.pressure, to: self.pressureView, label: "hPa", description: "Pressure", lineColor: lineColor.pressure)
+            DispatchQueue.main.async {
+                self.populate(data: graphModel.temperature, to: self.temperatureView, label: "Celsius", description: "Temperature", lineColor: lineColor.temperature)
+                self.populate(data: graphModel.humidity, to: self.humidityView, label: "Percentage", description: "Humidity", lineColor: lineColor.humidity)
+                self.populate(data: graphModel.pressure, to: self.pressureView, label: "hPa", description: "Pressure", lineColor: lineColor.pressure)
+            }
         })
     }()
     

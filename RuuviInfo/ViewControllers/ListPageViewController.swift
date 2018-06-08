@@ -16,25 +16,30 @@ class ListPageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var model: [RuuviTag] = [] {
+    fileprivate var model: [RuuviTag] = [] {
         didSet {
-            model.sort { (tag1, tag2) -> Bool in
-                return tag1.uuid?.uuidString ?? "" < tag2.uuid?.uuidString ?? ""
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         }
     }
     
     fileprivate lazy var listViewModel: RuuviTagListViewModelProtocol = {
         return RuuviTagListViewModel(
             didUpdateTags: { tags in
-                self.model = tags
+                self.model = tags.sorted { (tag1, tag2) -> Bool in
+                    return tag1.uuid?.uuidString ?? "" < tag2.uuid?.uuidString ?? ""
+                }
             },
             didUpdateTag: { tag in
-                if let index = self.model.index(of: tag) {
-                    self.model.remove(at: index)
+                var tags = self.model
+                if let index = tags.index(of: tag) {
+                    tags.remove(at: index)
                 }
-                self.model.append(tag)
+                tags.append(tag)
+                self.model = tags.sorted { (tag1, tag2) -> Bool in
+                    return tag1.uuid?.uuidString ?? "" < tag2.uuid?.uuidString ?? ""
+                }
             }
         )
     }()
@@ -43,7 +48,7 @@ class ListPageViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+       
         // Add the gesture recognizer
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectTapped(tapGestureRecognizer:)))
         let pressType = UIPressType.playPause
@@ -70,8 +75,11 @@ class ListPageViewController: UIViewController {
     
     @objc
     func selectTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        debugPrint("Accessory button tapped")
-        guard let indexPath = self.indexPath else {
+        showNamingDialog()
+    }
+    
+    private func showNamingDialog() {
+        guard let indexPath = tableView.indexPathForSelectedRow ?? self.indexPath else {
             debugPrint("Nothing selected.. I'm bailing out")
             return
         }
@@ -117,7 +125,7 @@ extension ListPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        
+        showNamingDialog()
     }
 }
 extension ListPageViewController: UITableViewDelegate {}
