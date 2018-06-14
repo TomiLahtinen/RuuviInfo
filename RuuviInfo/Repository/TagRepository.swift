@@ -20,7 +20,7 @@ class TagRepository: TagRepositoryProtocol {
     let managedContext: NSManagedObjectContext!
     
     init() {
-        managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        managedContext = PersistenceContainer.shared.persistentContainer.viewContext
     }
     
     func fetchTag(with uuid: UUID) -> RuuviTag? {

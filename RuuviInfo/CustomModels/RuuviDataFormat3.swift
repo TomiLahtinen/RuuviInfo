@@ -45,6 +45,7 @@ struct DataFormat3 {
         accelerationZ: signed(concatenateBytes(dataBytes[12], dataBytes[13])),
         voltage: concatenateBytes(dataBytes[14], dataBytes[15]))
         if result.manufacturer == DataConstants.RuuviManufacturerID {
+            debugPrint("Pressure bytes", dataBytes[6], dataBytes[7]) // 0xC2, 0xDB
             return result
         }
         else {
@@ -57,14 +58,13 @@ struct DataFormat3 {
 
 extension SensorValues {
     func insert(data rawData: DataFormat3) {
-        debugPrint("Data version", rawData.version)
         self.humidity = Int16(rawData.humidity) / 2
         self.temperature = Float(rawData.temperatureWhole) + (Float(rawData.temperatureFraction) / 100.0)
-        self.pressure = Int32(rawData.pressure) - 50000
+        self.pressure = Int32(rawData.pressure + 50000)
+        debugPrint("Parsed pressure", self.pressure)
         self.accelerationX = Int16(rawData.accelerationX)
         self.accelerationY = Int16(rawData.accelerationY)
         self.accelerationZ = Int16(rawData.accelerationZ)
-        debugPrint(rawData.voltage)
         self.voltage = Int16(rawData.voltage)
     }
 }

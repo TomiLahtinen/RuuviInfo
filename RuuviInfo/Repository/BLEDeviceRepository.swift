@@ -25,13 +25,6 @@ protocol BLEDeviceRepositoryProtocol {
 
 class BLEDeviceRepository: NSObject, BLEDeviceRepositoryProtocol {
     
-    fileprivate lazy var appDelegate: AppDelegate = {
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("No AppDelegate available???")
-        }
-        return delegate
-    }()
-    
     let dataKey = "kCBAdvDataManufacturerData"
     let centralManagerQueue = DispatchQueue(label: "CB Central manager dispatch queue")
     let deviceAdvertisementReceived: (RuuviTag) -> ()
@@ -43,7 +36,7 @@ class BLEDeviceRepository: NSObject, BLEDeviceRepositoryProtocol {
         let opts = [CBCentralManagerScanOptionSolicitedServiceUUIDsKey: true,
                     CBCentralManagerOptionShowPowerAlertKey: true,
                     CBCentralManagerScanOptionAllowDuplicatesKey: true]
-        centralManager = CBCentralManager(delegate: nil, queue: centralManagerQueue, options: opts)
+        centralManager = CBCentralManager(delegate: nil, queue: DispatchQueue.main, options: opts)
         super.init()
         centralManager.delegate = self
     }
@@ -81,7 +74,7 @@ class BLEDeviceRepository: NSObject, BLEDeviceRepositoryProtocol {
             tag.sensorValues = NSSet(object: value)
         }
         else {
-            tag.sensorValues = tag.sensorValues?.adding(value) as! NSSet
+            tag.sensorValues = tag.sensorValues?.adding(value) as? NSSet
         }
         
     }
@@ -105,7 +98,7 @@ extension BLEDeviceRepository: CBCentralManagerDelegate {
            let rawData = DataFormat3.decode(data: manufacturerData as? Data){
             debugPrint("RuuviTag data received")
           
-            let managedContext = appDelegate.persistentContainer.viewContext
+            let managedContext = PersistenceContainer.shared.persistentContainer.viewContext
             // Has we tag in almighty CoreData
             let tag = fetchTagOrCreate(for: peripheral, with: rawData, in: managedContext)
             createObservation(from: rawData, for: tag, in: managedContext)

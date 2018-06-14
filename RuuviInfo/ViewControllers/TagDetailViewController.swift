@@ -35,7 +35,11 @@ class TagDetailViewController: UIViewController {
         return RuuviTagDetailViewModel(dataUpdated: { graphModel in
             DispatchQueue.main.async {
                 self.populate(data: graphModel.temperature, to: self.temperatureView, label: "Celsius", description: "Temperature", lineColor: lineColor.temperature)
+            }
+            DispatchQueue.main.async {
                 self.populate(data: graphModel.humidity, to: self.humidityView, label: "Percentage", description: "Humidity", lineColor: lineColor.humidity)
+            }
+            DispatchQueue.main.async {
                 self.populate(data: graphModel.pressure, to: self.pressureView, label: "hPa", description: "Pressure", lineColor: lineColor.pressure)
             }
         })
