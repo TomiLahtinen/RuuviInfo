@@ -24,7 +24,6 @@
 		563075A620C7C1810013147D /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BD820C55AC100D93500 /* TagDetailViewController.swift */; };
 		563075AB20C7C1820013147D /* RuuviTag+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */; };
 		563075AC20C7C1820013147D /* TagInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5161D20C0277A00667FED /* TagInfo.swift */; };
-		563075AD20C7C1820013147D /* RuuviDataFormat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */; };
 		563075AE20C7C1820013147D /* SensorGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */; };
 		563075AF20C7F5F10013147D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A515EF20C0211F00667FED /* Assets.xcassets */; };
 		56595BD920C55AC100D93500 /* TagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56595BD820C55AC100D93500 /* TagDetailViewController.swift */; };
@@ -43,7 +42,9 @@
 		56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162120C0281300667FED /* RuuviTagListViewModel.swift */; };
 		56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5162320C11F9300667FED /* BLEDeviceRepository.swift */; };
 		56C090BB20D2777900CCFED1 /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB9E3520CA9B7300E2F12D /* PersistenceContainer.swift */; };
-		56D4EA3F20C14527004B6C00 /* RuuviDataFormat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */; };
+		56C090C120D2922400CCFED1 /* InfoViewPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C090C020D2922400CCFED1 /* InfoViewPart.swift */; };
+		56C090C220D292C800CCFED1 /* InfoViewPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C090C020D2922400CCFED1 /* InfoViewPart.swift */; };
+		56C090C420D2955100CCFED1 /* InfoViewTvOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C090C320D2955100CCFED1 /* InfoViewTvOS.xib */; };
 		56D4EA4220C1559F004B6C00 /* RuuviInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA4020C1559F004B6C00 /* RuuviInfo.xcdatamodeld */; };
 		56D4EA8220C17820004B6C00 /* RuuviTag+Accessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4EA8120C17820004B6C00 /* RuuviTag+Accessor.swift */; };
 		56EB9E3620CA9B7300E2F12D /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB9E3520CA9B7300E2F12D /* PersistenceContainer.swift */; };
@@ -117,7 +118,8 @@
 		56A5161D20C0277A00667FED /* TagInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInfo.swift; sourceTree = "<group>"; };
 		56A5162120C0281300667FED /* RuuviTagListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviTagListViewModel.swift; sourceTree = "<group>"; };
 		56A5162320C11F9300667FED /* BLEDeviceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDeviceRepository.swift; sourceTree = "<group>"; };
-		56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuuviDataFormat3.swift; sourceTree = "<group>"; };
+		56C090C020D2922400CCFED1 /* InfoViewPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewPart.swift; sourceTree = "<group>"; };
+		56C090C320D2955100CCFED1 /* InfoViewTvOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewTvOS.xib; sourceTree = "<group>"; };
 		56D4EA4120C1559F004B6C00 /* TagModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TagModel.xcdatamodel; sourceTree = "<group>"; };
 		56D4EA8120C17820004B6C00 /* RuuviTag+Accessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RuuviTag+Accessor.swift"; sourceTree = "<group>"; };
 		56EB9E3520CA9B7300E2F12D /* PersistenceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceContainer.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				5630757320C7C0DB0013147D /* AppDelegate.swift */,
 				5630757A20C7C0DB0013147D /* Main.storyboard */,
+				56C090C320D2955100CCFED1 /* InfoViewTvOS.xib */,
 				5630757D20C7C0DD0013147D /* Assets.xcassets */,
 				5630757F20C7C0DD0013147D /* Info.plist */,
 			);
@@ -272,7 +275,6 @@
 			children = (
 				56A5161B20C0274E00667FED /* RuuviTag+Equatable.swift */,
 				56A5161D20C0277A00667FED /* TagInfo.swift */,
-				56D4EA3E20C14527004B6C00 /* RuuviDataFormat3.swift */,
 				56595BDC20C68E6C00D93500 /* SensorGraphModel.swift */,
 			);
 			path = CustomModels;
@@ -284,6 +286,7 @@
 				56A515EA20C0211E00667FED /* PageViewController.swift */,
 				56A5161620C025F800667FED /* ListPageViewController.swift */,
 				56595BD820C55AC100D93500 /* TagDetailViewController.swift */,
+				56C090C020D2922400CCFED1 /* InfoViewPart.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C090C420D2955100CCFED1 /* InfoViewTvOS.xib in Resources */,
 				5630757E20C7C0DD0013147D /* Assets.xcassets in Resources */,
 				563075AF20C7F5F10013147D /* Assets.xcassets in Resources */,
 				5630757C20C7C0DB0013147D /* Main.storyboard in Resources */,
@@ -634,12 +638,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfoTV/Pods-RuuviInfoTV-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftBytes-tvOS/SwiftBytes.framework",
+				"${BUILT_PRODUCTS_DIR}/RuuviTag-iOS-tvOS/RuuviTag_iOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBytes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RuuviTag_iOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -672,12 +676,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RuuviInfo/Pods-RuuviInfo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts-iOS/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftBytes-iOS/SwiftBytes.framework",
+				"${BUILT_PRODUCTS_DIR}/RuuviTag-iOS-iOS/RuuviTag_iOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBytes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RuuviTag_iOS.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -695,6 +699,7 @@
 				563075A120C7C1810013147D /* RuuviTagListViewModel.swift in Sources */,
 				5630757420C7C0DB0013147D /* AppDelegate.swift in Sources */,
 				56C090BB20D2777900CCFED1 /* PersistenceContainer.swift in Sources */,
+				56C090C220D292C800CCFED1 /* InfoViewPart.swift in Sources */,
 				563075A320C7C1810013147D /* BLEDeviceRepository.swift in Sources */,
 				563075A420C7C1810013147D /* TagRepository.swift in Sources */,
 				563075A620C7C1810013147D /* TagDetailViewController.swift in Sources */,
@@ -703,7 +708,6 @@
 				563075AC20C7C1820013147D /* TagInfo.swift in Sources */,
 				563075AB20C7C1820013147D /* RuuviTag+Equatable.swift in Sources */,
 				563075A020C7C1210013147D /* ListPageViewController.swift in Sources */,
-				563075AD20C7C1820013147D /* RuuviDataFormat3.swift in Sources */,
 				563075A520C7C1810013147D /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,13 +736,13 @@
 				56D4EA4220C1559F004B6C00 /* RuuviInfo.xcdatamodeld in Sources */,
 				56A5162420C11F9300667FED /* BLEDeviceRepository.swift in Sources */,
 				56A5161C20C0274E00667FED /* RuuviTag+Equatable.swift in Sources */,
-				56D4EA3F20C14527004B6C00 /* RuuviDataFormat3.swift in Sources */,
 				56A5162220C0281300667FED /* RuuviTagListViewModel.swift in Sources */,
 				56595BDD20C68E6C00D93500 /* SensorGraphModel.swift in Sources */,
 				56A5161720C025F800667FED /* ListPageViewController.swift in Sources */,
 				56A515EB20C0211E00667FED /* PageViewController.swift in Sources */,
 				56D4EA8220C17820004B6C00 /* RuuviTag+Accessor.swift in Sources */,
 				5630756C20C6B3290013147D /* RuuviTagDetailViewModel.swift in Sources */,
+				56C090C120D2922400CCFED1 /* InfoViewPart.swift in Sources */,
 				56A5161E20C0277A00667FED /* TagInfo.swift in Sources */,
 				56595BDB20C6680100D93500 /* TagRepository.swift in Sources */,
 				56A515E920C0211E00667FED /* AppDelegate.swift in Sources */,

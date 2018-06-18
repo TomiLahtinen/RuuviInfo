@@ -86,15 +86,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pjz-LB-PH0">
                                 <rect key="frame" x="90" y="60" width="1740" height="960"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="St9-aq-Paw" userLabel="TemperatureView" customClass="LineChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-Gs-6UY" customClass="InfoViewPart" customModule="RuuviInfoTV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="1740" height="317"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl5-cT-wxl" userLabel="HumidityView" customClass="LineChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUS-GM-zPz" customClass="InfoViewPart" customModule="RuuviInfoTV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="321" width="1740" height="318"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-00-a2s" userLabel="PressureView" customClass="LineChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-2C-sNt" customClass="InfoViewPart" customModule="RuuviInfoTV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="643" width="1740" height="317"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -110,9 +110,9 @@
                         <viewLayoutGuide key="safeArea" id="3g5-2i-8pX"/>
                     </view>
                     <connections>
-                        <outlet property="humidityView" destination="rl5-cT-wxl" id="Pi7-sz-7fx"/>
-                        <outlet property="pressureView" destination="OKJ-00-a2s" id="evA-p7-M8T"/>
-                        <outlet property="temperatureView" destination="St9-aq-Paw" id="hzX-D0-jV4"/>
+                        <outlet property="humidityView" destination="rUS-GM-zPz" id="fM5-xf-KYX"/>
+                        <outlet property="pressureView" destination="qLJ-2C-sNt" id="MJi-2h-kva"/>
+                        <outlet property="temperatureView" destination="lgL-Gs-6UY" id="3Js-ur-5Re"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dww-XA-PWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
